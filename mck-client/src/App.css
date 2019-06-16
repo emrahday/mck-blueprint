@@ -1,0 +1,19 @@
+.h2{
+  text-align: left;
+}
+
+.error {
+  color: red;
+}
+
+.App {
+  /* text-align: center; */
+}
+
+.App-column {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

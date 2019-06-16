@@ -1,0 +1,43 @@
+.row {
+    width: 520px;
+    text-align: left;
+    border: 1px solid black;
+}
+
+.content {
+    width: 70%;
+    float: left;
+}
+
+.buttons {
+    padding: 8px;
+    width: 25%;
+    float: left;
+    text-align: right;
+}
+
+.small {
+    width: 35%;
+    float: left;
+    max-width: 150px;
+}
+
+.large {
+    width: 55%;
+    float: left;
+}
+
+.info {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 8px;
+    display: block;
+    min-height: 20px ;
+}
+
+button {
+    margin: 8px;
+    width: 90%;
+    height: 30px;
+}
