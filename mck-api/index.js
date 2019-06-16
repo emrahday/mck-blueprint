@@ -7,7 +7,6 @@ const states = require('./states');
 const app = express();
 app.use(cors());
 
-// TODO add tests
 app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/', (req, res) => {

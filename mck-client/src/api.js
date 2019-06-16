@@ -7,8 +7,6 @@ const uri = {
     BLOCK : id => `${API_URI}/reports/${id}/block`
 }
 
-// TODO handle api errors
-
 const api = {
     getReportList: async () => {
         try {

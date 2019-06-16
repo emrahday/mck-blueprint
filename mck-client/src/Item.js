@@ -1,7 +1,5 @@
-import React, { Component, Fragment  } from "react";
+import React, { Component, Fragment  } from 'react';
 import './Item.css'
-
-//TODO double quotes single quotes, eslint not checking
 
 class Item extends Component {
 

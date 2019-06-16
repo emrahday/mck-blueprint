@@ -62,7 +62,7 @@ class List extends Component {
         });
     }
 
-    render() {
+    render(){
         return (
             <Fragment>
                 <h2>Reports</h2>
