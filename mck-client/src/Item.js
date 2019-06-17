@@ -4,7 +4,17 @@ import './Item.css'
 class Item extends Component {
 
     render() {
-        const { id, state, payload: { reportType }, payload : {message}  } = this.props.data;
+
+        // deconstruct id, state, reportType, message conditionally
+        // check test file, even if there is no any payload submitted
+        // it can still set default values. 
+        const { 
+            id, 
+            state, 
+            payload: { reportType = '' } = { reportType: ''}, 
+            payload : { message = '' } = { message: '' }
+        } = this.props.data;
+
         return (
             <Fragment>
                 <div className="row">
@@ -14,7 +24,7 @@ class Item extends Component {
                         <div className="state info small">{state}</div>
                         <div className="message info large">{message}</div>
                         <div className="details info small">
-                            <a href="">Details</a>
+                            <a href="/">Details</a>
                         </div>
                     </div>
                     <div className="buttons">

@@ -32,7 +32,25 @@ Application developed with node.js and npm, so your device contains these progra
 Main project [package.json](https://github.com/emrahday/mck/blob/master/package.json) contains eslint linter tool in order to analyze code style according to common conventions. [eslint configuration file](https://github.com/emrahday/mck/blob/master/.eslintrc.json) contains that conventions setttings. I have used one of three most populer convention `airbnb` which some additional settings enables es6 features.
 
 ## Unit tests
-Unit tests, (actually also integration tests because it manupulates stateful report.json), is available [report-handler.test.js](https://github.com/emrahday/mck/blob/master/mck-api/report-handler.test.js). tests are applied with one of most populer testing tools [jest](https://jestjs.io/). In order to run tests in **mck-api** api folder run `jest` command and it will run all tests in that folder. 
+
+### Test for API
+
+In order to run tests go to api folder **/mck-api** and run `jest` command. 
+
+Unit tests, (actually also integration tests because it manupulates stateful report.json), is available [report-handler.test.js](https://github.com/emrahday/mck/blob/master/mck-api/report-handler.test.js). tests are applied with one of most populer testing tools [jest](https://jestjs.io/). `jest` command should be run under **/mck-api** folder because jest is running with relative path 
+
+### Test for React Components
+
+In order to run tests go to React component folder **/mck-client** and run `npm run test:noWatch`. normally default commant is `npm run test` but it will also watcher function, I have extended this commant with **noWatch** mode. 
+
+There are 3 important react component which are covered by test;
+
+Most important one is [Item.js](https://github.com/emrahday/mck/blob/master/mck-client/src/Item.js) and it tested with [Item.test.js](https://github.com/emrahday/mck/blob/master/mck-client/src/Item.test.js)
+
+Other tests are really simple, just checking components are rendered correctly because these components not teking any parameter.
+[List.js](https://github.com/emrahday/mck/blob/master/mck-client/src/List.js) is tested with [List.test.js](https://github.com/emrahday/mck/blob/master/mck-client/src/List.test.js)
+[App.js](https://github.com/emrahday/mck/blob/master/mck-client/src/App.js) is tested with [App.test.js](https://github.com/emrahday/mck/blob/master/mck-client/src/App.test.js)
+
 
 ## Api
 API **mck-api** contains report.json which is having all data. in that package most important file is [report-handler.js](https://github.com/emrahday/mck/blob/master/mck-api/report-handler.js) which has main function for get report element complete list and set state of individual element, and file reading and writing functions. 
@@ -52,9 +70,7 @@ The only browser specific code is **mck-client**. I have sticked to browser supp
 
 # Typical development steps, build, deploy and start lsthe application
 
-After you make edit in your react client code base **mck-client** or express api **mck-api** you can run all tests under each package with `npm run test` command. it will trigger all jest test under `mck-api` and enzyme/jest test under `mck-client`
-
-if testing is successful you can build react app in **mck-client** with `npm run build:client` command. that will create a build version of react app under **/build** folder of **mck-client**
+if tests are successful you can build react app in **mck-client** with `npm run build:client` command. that will create a build version of react app under **/build** folder of **mck-client**
 
 if you want to serve this builded version of react app in express server you can deploy with `npm run deploy`. actually this command copies **/build** folder from **mck-client** devempment base to **mck-server** express server. 
 
@@ -63,10 +79,6 @@ after the deployment you can start your api seperately with `npm run start:api` 
 # Commands
 
 this command configurations available at main package [package.json](https://github.com/emrahday/mck/blob/master/package.json) it is possible to run under /mck folder. 
-
-### `npm run test`
-
-it runs all test packages under mck-api and mck-client
 
 ### `npm run build:client`
 

@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest /mck-api; cd ./mck-client && npm run test:noWatch mck-client",
     "build:client": "cd ./mck-client && npm run build",
     "start:server": "cd ./mck-server && npm run start",
     "start:client": "cd ./mck-client && npm run start",
