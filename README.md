@@ -1,3 +1,4 @@
+A sample blueprint for client/server application with react and express rest api
 
 # Architecture
 
